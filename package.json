@@ -1,0 +1,100 @@
+{
+  "name": "casbin-drizzle-adapter",
+  "version": "1.0.0",
+  "description": "Drizzle ORM adapter for Casbin",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "scripts": {
+    "precommit": "lint-staged",
+    "prepublish": "yarn run lint && yarn build",
+    "build": "rimraf lib && tsc",
+    "coverage": "jest --coverage --runInBand",
+    "lint": "eslint \"src/**/*.{ts,js,jsx}\"",
+    "fix": "eslint \"src/**/*.{ts,js,jsx}\" --fix",
+    "test": "jest --runInBand",
+    "release": "npx -p semantic-release -p @semantic-release/git -p @semantic-release/changelog semantic-release",
+    "prepare": "npm run build"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.8",
+    "@types/jest": "^29.5.11",
+    "@types/node": "^20.10.6",
+    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/parser": "^6.15.0",
+    "better-sqlite3": "^9.2.2",
+    "casbin": "^5.30.0",
+    "coveralls": "^3.1.1",
+    "drizzle-orm": "^0.29.0",
+    "eslint": "^8.56.0",
+    "husky": "^8.0.3",
+    "jest": "^29.7.0",
+    "lint-staged": "^15.2.0",
+    "rimraf": "^5.0.5",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.3.3"
+  },
+  "peerDependencies": {
+    "casbin": "^5.0.0",
+    "drizzle-orm": "^0.29.0"
+  },
+  "dependencies": {},
+  "files": [
+    "lib",
+    "examples"
+  ],
+  "homepage": "https://casbin.org",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/node-casbin/drizzle-adapter.git"
+  },
+  "keywords": [
+    "casbin",
+    "node-casbin",
+    "adapter",
+    "drizzle",
+    "drizzle-orm",
+    "access-control",
+    "authorization",
+    "auth",
+    "authz",
+    "acl",
+    "rbac",
+    "abac",
+    "orm"
+  ],
+  "author": "Node-Casbin",
+  "licenses": [
+    {
+      "type": "Apache-2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/node-casbin/drizzle-adapter/issues"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "jest": {
+    "testEnvironmentOptions": {
+      "url": "http://localhost"
+    },
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    },
+    "testMatch": [
+      "**/test/*.test.+(ts|tsx)"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  }
+}
