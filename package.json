@@ -1,11 +1,10 @@
 {
-  "name": "@casbin/drizzle-adapter",
+  "name": "drizzle-adapter",
   "version": "1.0.0",
   "description": "Drizzle ORM adapter for Casbin",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "publishConfig": {
-    "access": "public",
     "tag": "latest",
     "registry": "https://registry.npmjs.org"
   },
