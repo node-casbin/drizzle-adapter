@@ -1,9 +1,13 @@
 {
-  "name": "casbin-drizzle-adapter",
+  "name": "drizzle-adapter",
   "version": "1.0.0",
   "description": "Drizzle ORM adapter for Casbin",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
+  "publishConfig": {
+    "tag": "latest",
+    "registry": "https://registry.npmjs.org"
+  },
   "scripts": {
     "precommit": "lint-staged",
     "prepublish": "yarn run lint && yarn build",
@@ -12,7 +16,7 @@
     "lint": "eslint \"src/**/*.{ts,js,jsx}\"",
     "fix": "eslint \"src/**/*.{ts,js,jsx}\" --fix",
     "test": "jest --runInBand",
-    "release": "npx -p semantic-release -p @semantic-release/git -p @semantic-release/changelog semantic-release",
+    "release": "npx -p semantic-release -p @semantic-release/git -p @semantic-release/changelog -p @semantic-release/github semantic-release",
     "prepare": "npm run build"
   },
   "devDependencies": {

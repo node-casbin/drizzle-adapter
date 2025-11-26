@@ -6,10 +6,10 @@ Drizzle Adapter
 [![NPM download][download-image]][download-url]
 [![Discord](https://img.shields.io/discord/1022748306096537660?logo=discord&label=discord&color=5865F2)](https://discord.gg/S5UjpzGZjN)
 
-[npm-image]: https://img.shields.io/npm/v/casbin-drizzle-adapter.svg?style=flat-square
-[npm-url]: https://npmjs.com/package/casbin-drizzle-adapter
-[download-image]: https://img.shields.io/npm/dm/casbin-drizzle-adapter.svg?style=flat-square
-[download-url]: https://npmjs.com/package/casbin-drizzle-adapter
+[npm-image]: https://img.shields.io/npm/v/drizzle-adapter.svg?style=flat-square
+[npm-url]: https://npmjs.com/package/drizzle-adapter
+[download-image]: https://img.shields.io/npm/dm/drizzle-adapter.svg?style=flat-square
+[download-url]: https://npmjs.com/package/drizzle-adapter
 
 Drizzle Adapter is the [Drizzle ORM](https://github.com/drizzle-team/drizzle-orm) adapter for [Node-Casbin](https://github.com/casbin/node-casbin). With this library, Node-Casbin can load policy from Drizzle ORM supported database or save policy to it.
 
@@ -28,9 +28,9 @@ Based on [Officially Supported Databases](https://orm.drizzle.team/docs/overview
 ## Installation
 
 ```bash
-npm install casbin-drizzle-adapter
+npm install drizzle-adapter
 # or
-yarn add casbin-drizzle-adapter
+yarn add drizzle-adapter
 ```
 
 ## Simple Example
@@ -39,7 +39,7 @@ yarn add casbin-drizzle-adapter
 import { newEnforcer } from 'casbin';
 import { drizzle } from 'drizzle-orm/better-sqlite3';
 import Database from 'better-sqlite3';
-import DrizzleAdapter, { casbinRuleSqlite } from 'casbin-drizzle-adapter';
+import DrizzleAdapter, { casbinRuleSqlite } from 'drizzle-adapter';
 
 async function myFunction() {
     // Initialize a SQLite database
@@ -89,7 +89,7 @@ async function myFunction() {
 import { newEnforcer } from 'casbin';
 import { drizzle } from 'drizzle-orm/node-postgres';
 import { Pool } from 'pg';
-import DrizzleAdapter, { casbinRulePostgres } from 'casbin-drizzle-adapter';
+import DrizzleAdapter, { casbinRulePostgres } from 'drizzle-adapter';
 
 async function myFunction() {
     // Initialize a PostgreSQL connection
@@ -124,7 +124,7 @@ async function myFunction() {
 import { newEnforcer } from 'casbin';
 import { drizzle } from 'drizzle-orm/mysql2';
 import mysql from 'mysql2/promise';
-import DrizzleAdapter, { casbinRuleMysql } from 'casbin-drizzle-adapter';
+import DrizzleAdapter, { casbinRuleMysql } from 'drizzle-adapter';
 
 async function myFunction() {
     // Initialize a MySQL connection
@@ -159,7 +159,7 @@ async function myFunction() {
 import { newEnforcer } from 'casbin';
 import { drizzle } from 'drizzle-orm/better-sqlite3';
 import Database from 'better-sqlite3';
-import DrizzleAdapter, { casbinRuleSqlite } from 'casbin-drizzle-adapter';
+import DrizzleAdapter, { casbinRuleSqlite } from 'drizzle-adapter';
 
 async function myFunction() {
     const sqlite = new Database('casbin.db');
@@ -189,7 +189,7 @@ You can create a custom table schema if you need additional fields or different 
 
 ```typescript
 import { sqliteTable, text, integer } from 'drizzle-orm/sqlite-core';
-import DrizzleAdapter from 'casbin-drizzle-adapter';
+import DrizzleAdapter from 'drizzle-adapter';
 
 // Define a custom table schema
 const customCasbinRule = sqliteTable('my_casbin_rules', {
