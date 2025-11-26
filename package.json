@@ -16,7 +16,7 @@
     "lint": "eslint \"src/**/*.{ts,js,jsx}\"",
     "fix": "eslint \"src/**/*.{ts,js,jsx}\" --fix",
     "test": "jest --runInBand",
-    "release": "npx -p semantic-release -p @semantic-release/git -p @semantic-release/changelog -p @semantic-release/github semantic-release",
+    "release": "npx -p semantic-release -p @semantic-release/git -p @semantic-release/changelog semantic-release",
     "prepare": "npm run build"
   },
   "devDependencies": {
